@@ -11,4 +11,4 @@
 
 #define NO_AUTO_SHIFT_SPECIAL
 #define NO_AUTO_SHIFT_ALPHA
-#define FIRMWARE_VERSION u8"zbwBO/yMVdB"
+#define FIRMWARE_VERSION u8"zbwBO/Nprrj"

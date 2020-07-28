@@ -107,7 +107,7 @@ static bool autoshift_press(uint16_t keycode, keyrecord_t *record) {
  * If the autoshift key is released before the delay has elapsed, register the
  * key without a shift.
  */
-static void autoshift_end(uint16_t keycode, uint16_t now, bool matrixTrigger) {
+static void autoshift_end(uint16_t keycode, uint16_t now, bool matrix_trigger) {
     // Called on key down with KC_NO, auto-shifted key up, and timeout.
     if (autoshift_flags.in_progress) {
         // Process the auto-shiftable key.
@@ -125,7 +125,7 @@ static void autoshift_end(uint16_t keycode, uint16_t now, bool matrixTrigger) {
             register_code(autoshift_lastkey);
             autoshift_flags.lastshifted = true;
 #    if !defined(AUTO_SHIFT_NO_REPEAT) && !defined(AUTO_SHIFT_NO_AUTO_REPEAT)
-            if (matrixTrigger) {
+            if (matrix_trigger) {
                 // Prevents release.
                 return;
             }

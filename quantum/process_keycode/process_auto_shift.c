@@ -61,7 +61,6 @@ static bool autoshift_press(uint16_t keycode, keyrecord_t *record) {
         return true;
     }
 
-
 #    ifndef AUTO_SHIFT_MODIFIERS
     if (get_mods() & (~MOD_BIT(KC_LSFT))) {
         return true;
@@ -75,7 +74,6 @@ static bool autoshift_press(uint16_t keycode, keyrecord_t *record) {
         if (elapsed < TAPPING_TERM && keycode == autoshift_lastkey) {
             // Allow a tap-then-hold for keyrepeat.
             if (!autoshift_flags.lastshifted) {
-                // Change this and below to 16 if custom keys are added.
                 register_code(autoshift_lastkey);
             } else {
                 // Simulate pressing the shift key.
@@ -91,7 +89,7 @@ static bool autoshift_press(uint16_t keycode, keyrecord_t *record) {
 
     // Record the keycode so we can simulate it later.
     autoshift_lastkey           = keycode;
-    autoshift_time = record->event.time;
+    autoshift_time              = record->event.time;
     autoshift_flags.in_progress = true;
 
 #    if !defined(NO_ACTION_ONESHOT) && !defined(NO_ACTION_TAPPING)
@@ -116,7 +114,6 @@ static void autoshift_end(uint16_t keycode, uint16_t now, bool matrix_trigger) {
         // Time since the initial press was recorded.
         const uint16_t elapsed = TIMER_DIFF_16(now, autoshift_time);
         if (elapsed < autoshift_timeout) {
-            // Change this and below to 16 if custom keys are added.
             register_code(autoshift_lastkey);
             autoshift_flags.lastshifted = false;
         } else {
@@ -133,12 +130,11 @@ static void autoshift_end(uint16_t keycode, uint16_t now, bool matrix_trigger) {
         }
 
 #    if TAP_CODE_DELAY > 0
-                wait_ms(TAP_CODE_DELAY);
+        wait_ms(TAP_CODE_DELAY);
 #    endif
         unregister_code(autoshift_lastkey);
         autoshift_flush_shift();
-    }
-    else {
+    } else {
         // Release after keyrepeat.
         unregister_code(keycode);
         if (keycode == autoshift_lastkey) {
@@ -159,16 +155,16 @@ static void autoshift_end(uint16_t keycode, uint16_t now, bool matrix_trigger) {
  *  to be released.
  */
 void autoshift_matrix_scan(void) {
-    const uint16_t now = timer_read();
-    const uint16_t elapsed = TIMER_DIFF_16(now, autoshift_time);
-    if (autoshift_flags.in_progress && elapsed >= autoshift_timeout) {
-        autoshift_end(autoshift_lastkey, now, true);
+    if (autoshift_flags.in_progress) {
+        const uint16_t now     = timer_read();
+        const uint16_t elapsed = TIMER_DIFF_16(now, autoshift_time);
+        if (elapsed >= autoshift_timeout) {
+            autoshift_end(autoshift_lastkey, now, true);
+        }
     }
 }
 
-void autoshift_enable(void) {
-    autoshift_flags.enabled = true;
-}
+void autoshift_enable(void) { autoshift_flags.enabled = true; }
 
 void autoshift_disable(void) {
     autoshift_flags.enabled = false;
@@ -191,9 +187,11 @@ void set_autoshift_timeout(uint16_t timeout) { autoshift_timeout = timeout; }
 bool process_auto_shift(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         if (autoshift_flags.in_progress) {
+            // Evaluate previous key if there is one. Doing this elsewhere is
+            // more complicated and easier to break.
             autoshift_end(KC_NO, record->event.time, false);
         }
-        // For pressing another key while keyrepeating shifted autoshift
+        // For pressing another key while keyrepeating shifted autoshift.
         autoshift_flush_shift();
 
         switch (keycode) {

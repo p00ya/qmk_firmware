@@ -129,14 +129,15 @@ does not require custom shift values, only `autoshift_is_custom` is required.
 Below is an example adding period to Auto Shift and making its shifted value
 exclamation point. Make sure to use weak mods - setting real would make any
 keys following it use their shifted values as if you were holding the key.
-Clearing of modifiers is handled by Auto Shift, and the shift value is always
-that of the last key pressed (whether or not it's an Auto Shift key).
+Clearing of modifiers is handled by Auto Shift, and the os-sent shift value
+if keyrepeating multiple keys is always that of the last key pressed (whether
+or not it's an Auto Shift key).
 
 You can also have non-shifted keys for the shifted values (or even no shifted
 value), just don't set a shift modifier!
 
 ```c
-bool autoshift_is_custom(uint16_t keycode, keyrecord_t *record) {
+bool autoshift_is_custom(uint16_t keycode, keyrecord_t *record, uint16_t elapsed) {
     switch(keycode) {
         case KC_DOT:
             break;
@@ -178,16 +179,17 @@ work with super if you're on Windows (the start menu would open on release).
 ```c
 // Stores whether to hit the key at all, and whether it should be shifted.
 bool as_colon[2];
-bool autoshift_is_custom(uint16_t keycode, keyrecord_t *record) {
+bool autoshift_is_custom(uint16_t keycode, keyrecord_t *record, uint16_t elapsed) {
     switch(keycode) {
         case KC_SCLN:
             if (record->event.pressed) {
-                add_mods(MOD_BIT(KC_LSFT));
+                //add_mods(MOD_BIT(KC_LSFT)); // Can go here for other modifiers if you want.
                 as_colon[0] = true;
             } else {
                 // Evaluate on the physical key up.
                 del_mods(MOD_BIT(KC_LSFT));
-                if (as_colon[0]) {
+                // Also cancels if you held it for very long, so one can use it with the mouse.
+                if (as_colon[0] && elapsed < 3*AUTO_SHIFT_TIMEOUT) {
                     if (as_colon[1]) { add_weak_mods(MOD_BIT(KC_LSFT)); }
                     tap_code(KC_SCLN);
                     del_weak_mods(MOD_BIT(KC_LSFT));
@@ -204,6 +206,10 @@ bool autoshift_is_custom(uint16_t keycode, keyrecord_t *record) {
 void autoshift_press_user(uint16_t keycode, bool shifted) {
     switch(keycode) {
         case KC_SCLN:
+            // Has to be here for shift mods, as otherwise it is set halfway through an action and
+            // Auto Shift thinks you're holding the mod and restores it on release (causing it to
+            // be stuck until you hit this or another shift key again).
+            add_mods(MOD_BIT(KC_LSFT));
             // We don't want to send the key until it's released, but need to know the shift state.
             as_colon[1] = shifted;
             return;

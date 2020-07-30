@@ -44,7 +44,7 @@ static struct {
 } autoshift_flags = {true, false, false, false, false, false};
 
 // Called on physical press, returns whether is autoshift key.
-__attribute__((weak)) bool autoshift_is_custom(uint16_t keycode, keyrecord_t *record) { return false; }
+__attribute__((weak)) bool autoshift_is_custom(uint16_t keycode, keyrecord_t *record, uint16_t elapsed) { return false; }
 
 // Called when an autoshift key needs to be pressed.
 __attribute__((weak)) void autoshift_press_user(uint16_t keycode, bool shifted) {
@@ -258,7 +258,7 @@ bool process_auto_shift(uint16_t keycode, keyrecord_t *record) {
     }
 
     if (autoshift_flags.enabled) {
-        if (autoshift_is_custom(keycode, record)) {
+        if (autoshift_is_custom(keycode, record, TIMER_DIFF_16(record->event.time, autoshift_time))) {
             if (record->event.pressed) {
                 return autoshift_press(keycode, record);
             } else {

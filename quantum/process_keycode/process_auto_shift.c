@@ -43,16 +43,12 @@ static struct {
     bool cancelling_rshift : 1;
 } autoshift_flags = {true, false, false, false, false, false};
 
-__attribute__((weak)) bool autoshift_is_custom(uint16_t keycode) { return false; }
-
-// Called on autoshift key physical press.
-__attribute__((weak)) void autoshift_press_user(uint16_t keycode) {}
+// Called on physical press, returns whether is autoshift key.
+__attribute__((weak)) bool autoshift_is_custom(uint16_t keycode, keyrecord_t *record) { return false; }
 
 // Called when an autoshift key needs to be pressed.
-__attribute__((weak)) void autoshift_end_user(uint16_t keycode, bool shifted) {
-    if (shifted) {
-        add_weak_mods(MOD_BIT(KC_LSFT));
-    }
+__attribute__((weak)) void autoshift_press_user(uint16_t keycode, bool shifted) {
+    if (shifted) { add_weak_mods(MOD_BIT(KC_LSFT)); }
     register_code(keycode);
 }
 
@@ -89,10 +85,6 @@ static void autoshift_flush_shift(void) {
  *  \return Whether the record should be further processed.
  */
 static bool autoshift_press(uint16_t keycode, keyrecord_t *record) {
-    if (!autoshift_flags.enabled) {
-        return true;
-    }
-
 #    ifndef AUTO_SHIFT_MODIFIERS
     if (get_mods() & (~MOD_BIT(KC_LSFT))) {
         return true;
@@ -114,7 +106,7 @@ static bool autoshift_press(uint16_t keycode, keyrecord_t *record) {
                 del_mods(MOD_BIT(KC_RSFT));
             }
             // autoshift_shift_state doesn't need to be changed.
-            autoshift_end_user(autoshift_lastkey, autoshift_flags.lastshifted);
+            autoshift_press_user(autoshift_lastkey, autoshift_flags.lastshifted);
             return false;
         }
 #        ifndef AUTO_SHIFT_NO_AUTO_REPEAT
@@ -126,7 +118,6 @@ static bool autoshift_press(uint16_t keycode, keyrecord_t *record) {
     autoshift_lastkey           = keycode;
     autoshift_time              = record->event.time;
     autoshift_flags.in_progress = true;
-    autoshift_press_user(keycode);
 
 #    if !defined(NO_ACTION_ONESHOT) && !defined(NO_ACTION_TAPPING)
     clear_oneshot_layer_state(ONESHOT_OTHER_KEY_PRESSED);
@@ -140,10 +131,13 @@ static bool autoshift_press(uint16_t keycode, keyrecord_t *record) {
  *
  * If the autoshift key is released before the delay has elapsed, register the
  * key without a shift.
+ *
+ * Called on key down with KC_NO, auto-shifted key up, and timeout. Keycode is
+ * always the key that needs to be evaluated, not the key that may have
+ * cancelled it.
  */
 static void autoshift_end(uint16_t keycode, uint16_t now, bool matrix_trigger) {
-    // Called on key down with KC_NO, auto-shifted key up, and timeout.
-    if (autoshift_flags.in_progress) {
+    if (autoshift_flags.in_progress && keycode == autoshift_lastkey) {
         // Process the auto-shiftable key.
         autoshift_flags.in_progress = false;
 
@@ -159,7 +153,7 @@ static void autoshift_end(uint16_t keycode, uint16_t now, bool matrix_trigger) {
             autoshift_flags.cancelling_rshift = true;
             del_mods(MOD_BIT(KC_RSFT));
         }
-        autoshift_end_user(autoshift_lastkey, autoshift_flags.lastshifted);
+        autoshift_press_user(autoshift_lastkey, autoshift_flags.lastshifted);
 #    if defined(AUTO_SHIFT_REPEAT) && !defined(AUTO_SHIFT_NO_AUTO_REPEAT)
         if (matrix_trigger) {
             // Prevents release.
@@ -173,8 +167,8 @@ static void autoshift_end(uint16_t keycode, uint16_t now, bool matrix_trigger) {
         autoshift_release_user(autoshift_lastkey, autoshift_shift_states[autoshift_lastkey & 0xFF]);
         autoshift_flush_shift();
     } else {
-        // Release after keyrepeat.
-        autoshift_release_user(keycode, autoshift_shift_states[autoshift_lastkey & 0xFF]);
+        // Release after keyrepeat or evaluated early.
+        autoshift_release_user(keycode, autoshift_shift_states[keycode & 0xFF]);
         if (keycode == autoshift_lastkey) {
             // This will only fire when the key was the last auto-shiftable
             // pressed. That prevents aaaaBBBB then releasing a from unshifting
@@ -226,7 +220,7 @@ bool process_auto_shift(uint16_t keycode, keyrecord_t *record) {
         if (autoshift_flags.in_progress) {
             // Evaluate previous key if there is one. Doing this elsewhere is
             // more complicated and easier to break.
-            autoshift_end(KC_NO, record->event.time, false);
+            autoshift_end(autoshift_lastkey, record->event.time, false);
         }
         // For pressing another key while keyrepeating shifted autoshift.
         autoshift_flush_shift();
@@ -263,32 +257,34 @@ bool process_auto_shift(uint16_t keycode, keyrecord_t *record) {
         }
     }
 
-    if (autoshift_is_custom(keycode)) {
-        if (record->event.pressed) {
-            return autoshift_press(keycode, record);
-        } else {
-            autoshift_end(keycode, record->event.time, false);
-            return false;
-        }
-    }
-    switch (keycode) {
-#    ifndef NO_AUTO_SHIFT_ALPHA
-        case KC_A ... KC_Z:
-#    endif
-#    ifndef NO_AUTO_SHIFT_NUMERIC
-        case KC_1 ... KC_0:
-#    endif
-#    ifndef NO_AUTO_SHIFT_SPECIAL
-        case KC_TAB:
-        case KC_MINUS ... KC_SLASH:
-        case KC_NONUS_BSLASH:
-#    endif
+    if (autoshift_flags.enabled) {
+        if (autoshift_is_custom(keycode, record)) {
             if (record->event.pressed) {
                 return autoshift_press(keycode, record);
             } else {
                 autoshift_end(keycode, record->event.time, false);
                 return false;
             }
+        }
+        switch (keycode) {
+#    ifndef NO_AUTO_SHIFT_ALPHA
+            case KC_A ... KC_Z:
+#    endif
+#    ifndef NO_AUTO_SHIFT_NUMERIC
+            case KC_1 ... KC_0:
+#    endif
+#    ifndef NO_AUTO_SHIFT_SPECIAL
+            case KC_TAB:
+            case KC_MINUS ... KC_SLASH:
+            case KC_NONUS_BSLASH:
+#    endif
+                if (record->event.pressed) {
+                    return autoshift_press(keycode, record);
+                } else {
+                    autoshift_end(keycode, record->event.time, false);
+                    return false;
+                }
+        }
     }
     return true;
 }

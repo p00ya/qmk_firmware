@@ -46,12 +46,6 @@ void autoshift_timer_report(void) {
 }
 #    endif
 
-/** \brief Releases the shift key if it was held by autoshift */
-static void autoshift_flush_shift(void) {
-    del_weak_mods(MOD_BIT(KC_LSFT));
-    autoshift_flags.holding_shift = false;
-}
-
 /** \brief Record the press of an autoshiftable key
  *
  *  \return Whether the record should be further processed.
@@ -133,7 +127,7 @@ static void autoshift_end(uint16_t keycode, uint16_t now, bool matrix_trigger) {
         wait_ms(TAP_CODE_DELAY);
 #    endif
         unregister_code(autoshift_lastkey);
-        autoshift_flush_shift();
+        del_weak_mods(MOD_BIT(KC_LSFT));
     } else {
         // Release after keyrepeat.
         unregister_code(keycode);
@@ -141,9 +135,10 @@ static void autoshift_end(uint16_t keycode, uint16_t now, bool matrix_trigger) {
             // This will only fire when the key was the last auto-shiftable
             // pressed. That prevents aaaaBBBB then releasing a from unshifting
             // later Bs (if B wasn't auto-shiftable).
-            autoshift_flush_shift();
+            del_weak_mods(MOD_BIT(KC_LSFT));
         }
     }
+    send_keyboard_report(); // del_weak_mods doesn't send one.
     // Roll the autoshift_time forward for detecting tap-and-hold.
     autoshift_time = now;
 }
@@ -168,14 +163,12 @@ void autoshift_enable(void) { autoshift_flags.enabled = true; }
 
 void autoshift_disable(void) {
     autoshift_flags.enabled = false;
-    autoshift_flush_shift();
+    del_weak_mods(MOD_BIT(KC_LSFT));
 }
 
 void autoshift_toggle(void) {
     autoshift_flags.enabled = !autoshift_flags.enabled;
-    if (!autoshift_flags.enabled) {
-        autoshift_flush_shift();
-    }
+    del_weak_mods(MOD_BIT(KC_LSFT));
 }
 
 bool get_autoshift_state(void) { return autoshift_flags.enabled; }
@@ -192,7 +185,7 @@ bool process_auto_shift(uint16_t keycode, keyrecord_t *record) {
             autoshift_end(KC_NO, record->event.time, false);
         }
         // For pressing another key while keyrepeating shifted autoshift.
-        autoshift_flush_shift();
+        del_weak_mods(MOD_BIT(KC_LSFT));
 
         switch (keycode) {
 #    ifndef AUTO_SHIFT_NO_SETUP

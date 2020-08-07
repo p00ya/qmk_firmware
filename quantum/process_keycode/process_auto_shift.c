@@ -171,8 +171,8 @@ static void autoshift_end(uint16_t keycode, uint16_t now, bool matrix_trigger) {
         autoshift_release_user(keycode, autoshift_shift_states[keycode & 0xFF]);
         if (keycode == autoshift_lastkey) {
             // This will only fire when the key was the last auto-shiftable
-            // pressed. That prevents aaaaBBBB then releasing a from unshifting
-            // later Bs (if B wasn't auto-shiftable).
+            // pressed. That prevents 'aaaaBBBB' then releasing 'a' from
+            // unshifting later 'B's (if 'B' wasn't auto-shiftable).
             autoshift_flush_shift();
         }
     }
@@ -223,6 +223,8 @@ bool process_auto_shift(uint16_t keycode, keyrecord_t *record) {
             autoshift_end(autoshift_lastkey, record->event.time, false);
         }
         // For pressing another key while keyrepeating shifted autoshift.
+        // Workaround until #9941 is merged, won't break anything after
+        // it is.
         autoshift_flush_shift();
 
         switch (keycode) {

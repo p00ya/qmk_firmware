@@ -125,19 +125,19 @@ optimal. To provide more customizability, there are three user-definable
 functions. The first, `autoshift_is_custom`, is called on every key event and
 returns whether it should be a part of Auto Shift. The other two are
 `autoshift_press/release_user`, and press or release the passed key. If one
-does not require custom shift values, only `autoshift_is_custom` is required.
-Below is an example adding period to Auto Shift and making its shifted value
-exclamation point. Make sure to use weak mods - setting real would make any
-keys following it use their shifted values as if you were holding the key.
-Clearing of modifiers is handled by Auto Shift, and the os-sent shift value
-if keyrepeating multiple keys is always that of the last key pressed (whether
-or not it's an Auto Shift key).
+does not require custom shift values but wants custom keys, only
+`autoshift_is_custom` is required. Below is an example adding period to Auto
+Shift and making its shifted value exclamation point. Make sure to use weak
+mods - setting real would make any keys following it use their shifted values
+as if you were holding the key. Clearing of modifiers is handled by Auto Shift,
+and the os-sent shift value if keyrepeating multiple keys is always that of
+the last key pressed (whether or not it's an Auto Shift key).
 
 You can also have non-shifted keys for the shifted values (or even no shifted
 value), just don't set a shift modifier!
 
 ```c
-bool autoshift_is_custom(uint16_t keycode, keyrecord_t *record, uint16_t elapsed) {
+bool autoshift_is_custom(uint16_t keycode) {
     switch(keycode) {
         case KC_DOT:
             break;
@@ -170,64 +170,6 @@ void autoshift_release_user(uint16_t keycode, bool shifted) {
 }
 ```
 
-Because of how much information you can get from these functions, even more is
-possible. Below is a mod-tap-like key that also is a part of Auto Shift (note
-the setting of weak mods and user mods, to not confuse Auto Shift). Note this
-won't work with keyrepeat, and presses the modifier anyway while held so won't
-work with super if you're on Windows (the start menu would open on release).
-
-```c
-// Stores whether to hit the key at all, and whether it should be shifted.
-bool as_colon[2];
-bool autoshift_is_custom(uint16_t keycode, keyrecord_t *record, uint16_t elapsed) {
-    switch(keycode) {
-        case KC_SCLN:
-            if (record->event.pressed) {
-                //add_mods(MOD_BIT(KC_LSFT)); // Can go here for other modifiers if you want.
-                as_colon[0] = true;
-            } else {
-                // Evaluate on the physical key up.
-                del_mods(MOD_BIT(KC_LSFT));
-                // Also cancels if you held it for very long, so one can use it with the mouse.
-                if (as_colon[0] && elapsed < 3*AUTO_SHIFT_TIMEOUT) {
-                    if (as_colon[1]) { add_weak_mods(MOD_BIT(KC_LSFT)); }
-                    tap_code(KC_SCLN);
-                    del_weak_mods(MOD_BIT(KC_LSFT));
-                }
-            }
-            break;
-        default:
-            // If there are any key events between the press and release, don't send the key.
-            as_colon[0] = false;
-            return false;
-    }
-    return true;
-}
-void autoshift_press_user(uint16_t keycode, bool shifted) {
-    switch(keycode) {
-        case KC_SCLN:
-            // Has to be here for shift mods, as otherwise it is set halfway through an action and
-            // Auto Shift thinks you're holding the mod and restores it on release (causing it to
-            // be stuck until you hit this or another shift key again).
-            add_mods(MOD_BIT(KC_LSFT));
-            // We don't want to send the key until it's released, but need to know the shift state.
-            as_colon[1] = shifted;
-            return;
-        default:
-            if (shifted) { add_weak_mods(MOD_BIT(KC_LSFT)); }
-            register_code(keycode);
-    }
-}
-void autoshift_release_user(uint16_t keycode, bool shifted) {
-    switch(keycode) {
-        case KC_SCLN:
-            // We never pressed the key.
-            return;
-        default:
-            unregister_code(keycode);
-    }
-}
-```
 
 ## Using Auto Shift Setup
 

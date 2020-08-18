@@ -138,7 +138,7 @@ static void autoshift_end(uint16_t keycode, uint16_t now, bool matrix_trigger) {
             del_weak_mods(MOD_BIT(KC_LSFT));
         }
     }
-    send_keyboard_report(); // del_weak_mods doesn't send one.
+    send_keyboard_report();  // del_weak_mods doesn't send one.
     // Roll the autoshift_time forward for detecting tap-and-hold.
     autoshift_time = now;
 }

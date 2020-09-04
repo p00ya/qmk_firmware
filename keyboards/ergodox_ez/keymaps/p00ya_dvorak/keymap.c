@@ -6,8 +6,8 @@
 #define L_NUM 1
 #define L_NAV 2
 #define L_COD 3
-#define L_FN 4
-
+#define L_STN 4
+#define L_FN 5
 
 // Dvorak-remapped keycodes for some punctuation.
 #define KD_LBRC KC_MINS
@@ -17,6 +17,9 @@
 #define KD_EQL  KC_RBRC
 #define KD_SLSH KC_LBRC
 #define KD_UNDS KC_DQUO
+
+// defined in bootmagic.c.
+extern keymap_config_t keymap_config;
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -28,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LCTL_T(KC_ESC), KC_A,           KC_S,           KC_D,           KC_F,           KC_G,                                                                           KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        KC_QUOT,
     KC_LSFT,        KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,           OSM(MOD_LSFT),                                  TT(L_NAV),      KC_N,           KC_M,           KC_COMM,        KC_DOT,         KC_SLSH,        KC_RSFT,
     MO(L_FN),       KC_LCTRL,       C(KC_LALT),     KC_LALT,        KC_LCMD,                                                                                                        KC_RCMD,        KC_LEFT,        KC_DOWN,        KC_UP,          KC_RGHT,
-                                                                                                    KC_TRNS,        KC_PSCR,        KC_HOME,        KC_END,
+                                                                                                    TG(L_STN),      KC_PSCR,        KC_HOME,        KC_END,
                                                                                                                     KC_PGUP,        KC_INS,
                                                                                     LT(L_COD,KC_SPC),KC_ENT,        KC_PGDN,        KC_DEL,         KD_UNDS,        KC_SPC
   ),
@@ -69,8 +72,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                    KC_TRNS,         KC_TRNS,
                                                  KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS, KC_TRNS
   ),
-  // Function layer.  This makes MO(4) feel like the "fn" modifier key on a Mac,
-  // enabling a function key row, some media keys, and some Apple-like
+  // Stenography layer.  Designed for Plover and similar software that maps
+  // QWERTY to a Steno layout, but with the vowels on the actual thumb clusters
+  // (instead of using the QWERTY "CV"/"NM" placements).  I've also moved the
+  // pinky keys down one row.
+  [L_STN] = LAYOUT_ergodox_pretty(
+    KC_NO,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO,
+    KC_NO,   KC_NO,   KC_W,    KC_E,    KC_R,    KC_T,    KC_NO,                             KC_NO,   KC_Y,    KC_U,    KC_I,    KC_O,    KC_NO,   KC_NO,
+    KC_NO,   KC_Q,    KC_S,    KC_D,    KC_F,    KC_G,                                                KC_H,    KC_J,    KC_K,    KC_L,    KC_P,    KC_LBRC,
+    KC_NO,   KC_A,    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                             KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_SCLN, KC_QUOT,
+    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                                                                 KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
+                                                          KC_TRNS, KC_NO,           KC_NO,   KC_NO,
+                                                                   KC_NO,           KC_NO,
+                                                 KC_C,    KC_V,    KC_NO,           KC_NO,   KC_N,    KC_M
+  ),
+  // Function layer.  This makes MO(L_FN) feel like the "fn" modifier key on a
+  // Mac, enabling a function key row, some media keys, and some Apple-like
   // behaviours for "return" and arrow keys.  It also makes caps-lock available
   // in the traditional position.
   [L_FN] = LAYOUT_ergodox_pretty(
@@ -82,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                           KC_TRNS, WEBUSB_PAIR,     KC_TRNS, KC_TRNS,
                                                                    KC_TRNS,         KC_TRNS,
                                                  KC_TRNS, KC_PENT, KC_TRNS,         KC_TRNS, KC_TRNS, KC_TRNS
-  ),
+  )
 };
 // clang-format on
 
@@ -91,8 +108,14 @@ void keyboard_post_init_user() {
     ergodox_led_all_set(LED_BRIGHTNESS_LO);
 }
 
+
 uint32_t layer_state_set_user(uint32_t state) {
-    const uint8_t layer = biton32(state);
+    uint8_t layer = biton32(state);
+    if (layer == L_FN) {
+        // Turn on all right LEDs as if L_FN was actually layer 7, which will
+        // also show the host LED status via the brightness.
+        layer = 7;
+    }
 
     // Encode layers as binary.
     for (int i = 0; i < 3; ++i) {
@@ -102,12 +125,11 @@ uint32_t layer_state_set_user(uint32_t state) {
             ergodox_right_led_off(i + 1);
         }
     }
-    
-    if (layer == 4) {
-        // Turn on all right LEDs, which will also show the host LED status via
-        // the brightness.
-        ergodox_right_led_1_on();
-        ergodox_right_led_2_on();
+
+    // Enable NKRO iff the stenography layer is active.
+    if (keymap_config.nkro != (layer == L_STN)) {
+        clear_keyboard();  // prevent stuck keys
+        keymap_config.nkro = (layer == L_STN);
     }
 
     return state;

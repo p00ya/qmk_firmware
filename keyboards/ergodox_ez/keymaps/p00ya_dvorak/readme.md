@@ -42,3 +42,8 @@ https://drive.google.com/uc?id=1twyb2AlcK5QeWFsg4lUtIF3IZhyC3aE9&export=download
 The layout in this keymap is duplicated in Oryx at https://configure.ergodox-ez.com/ergodox-ez/layouts/vAdRO/latest/0.  This means you can view the key layouts using the Oryx software.  Additionally, this branch includes WebUSB support, so it will work with the Oryx training software.
 
 There are some special features in this keymap (like control of the LEDs and NKRO) that are *not* supported by Oryx.  Therefore, I don't recommend downloading the source or firmware from the Oryx site.
+
+## macOS Keyboard Panel
+
+The base layout can be displayed as a custom panel in the macOS Accessibility Keyboard (AKA the "Keyboard Viewer").  Import the `p00yaErgodox.ascconfig` bundle using the
+[macOS Panel Editor](https://support.apple.com/en-us/guide/mac-help/mh43606/mac).

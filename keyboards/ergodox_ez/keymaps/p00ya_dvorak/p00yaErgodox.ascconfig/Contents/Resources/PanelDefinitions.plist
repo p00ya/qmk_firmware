@@ -3006,8 +3006,6 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
-					<key>DisplayText</key>
-					<string></string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3021,8 +3019,39 @@
 					<key>Actions</key>
 					<array>
 						<dict>
+							<key>ActionParam</key>
+							<dict>
+								<key>Events</key>
+								<array>
+									<dict>
+										<key>ActionParam</key>
+										<dict>
+											<key>KeyboardHWID</key>
+											<integer>40</integer>
+											<key>MacKeyCode</key>
+											<integer>59</integer>
+											<key>UsesMacKeyCode</key>
+											<true/>
+											<key>shouldNotLockModifier</key>
+											<false/>
+										</dict>
+										<key>ActionRecordedOffset</key>
+										<real>0.0</real>
+										<key>ActionType</key>
+										<string>ActionPressKeyCode</string>
+										<key>ID</key>
+										<string>Action.5EFF016D-26CB-48F8-91C8-6B270736BC1C</string>
+									</dict>
+								</array>
+								<key>isStickyKey</key>
+								<false/>
+							</dict>
 							<key>ActionRecordedOffset</key>
 							<real>0.0</real>
+							<key>ActionType</key>
+							<string>ActionPerformKeyMacro</string>
+							<key>ID</key>
+							<string>Action.54E9BAC7-B419-4869-BEC1-412F6CD4F269</string>
 						</dict>
 					</array>
 					<key>ButtonType</key>
@@ -3030,11 +3059,11 @@
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
 					<key>DisplayText</key>
-					<string>⌃⌥</string>
+					<string>⌃¹</string>
 					<key>FontSize</key>
-					<real>18</real>
+					<real>22</real>
 					<key>ID</key>
-					<string>Button.310B3E6F-8F42-462E-9D74-22BAB824671B</string>
+					<string>Button.11C6381F-851F-4D3F-86EB-7F4A6674A118</string>
 					<key>PanelObjectType</key>
 					<string>Button</string>
 					<key>Rect</key>
@@ -3349,8 +3378,6 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
-					<key>DisplayText</key>
-					<string></string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3847,7 +3874,7 @@
 			<key>ProductSupportType</key>
 			<string>VirtualKeyboard</string>
 			<key>Rect</key>
-			<string>{{0, 0}, {890, 275}}</string>
+			<string>{{0, 0}, {900, 285}}</string>
 			<key>ScanStyle</key>
 			<integer>0</integer>
 			<key>ShowPanelLocationString</key>

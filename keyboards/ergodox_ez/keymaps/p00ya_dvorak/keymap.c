@@ -38,26 +38,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Simulates a numpad with the 5-key aligned with QWERTY's J-key.
   // Num-zero and enter keys are duplicated to the thumb clusters.
   [L_NUM] = LAYOUT_ergodox_pretty(
-    KC_ESC,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                          KC_TRNS, KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS, KC_NO,   KC_TRNS,
-    KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                          KC_TRNS, KC_KP_7, KC_KP_8, KC_KP_9, KC_PPLS, KC_NO,   KC_TRNS,
-    KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                            KC_KP_4, KC_KP_5, KC_KP_6, KC_PPLS, KC_NO,   KC_TRNS,
-    KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                          KC_TRNS, KC_KP_1, KC_KP_2, KC_KP_3, KC_PENT, KC_NO,   KC_TRNS,
-    KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                                              KC_KP_0, KC_PDOT, KC_PENT, KC_NO,   KC_NO,
+    KC_ESC,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                          KC_TRNS, KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS, KC_NO,   KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                          KC_TRNS, KC_KP_7, KC_KP_8, KC_KP_9, KC_PPLS, KC_NO,   KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                            KC_KP_4, KC_KP_5, KC_KP_6, KC_PPLS, KC_NO,   KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                          KC_TRNS, KC_KP_1, KC_KP_2, KC_KP_3, KC_PENT, KC_NO,   KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                                              KC_KP_0, KC_PDOT, KC_PENT, KC_NO,   KC_NO,
                                                            KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS,
                                                                     KC_TRNS,        KC_TRNS,
                                                   KC_TRNS, KC_PENT, KC_TRNS,        KC_TRNS, KC_PENT, KC_KP_0
   ),
-  // Mouse-keys on the left hand and the dirpad / navigation pad on the right
-  // with a standard US layout.
+  // Dirpad / navigation pad on the right hand with a standard US layout.
   [L_NAV] = LAYOUT_ergodox_pretty(
     KC_ESC,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_PSCR, KC_SLCK, KC_PAUS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_BTN2, KC_MS_U, KC_BTN1, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_INS,  KC_HOME, KC_PGUP, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,                                             KC_TRNS, KC_DEL,  KC_END,  KC_PGDN, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_BTN1, KC_UP,   KC_BTN2, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                                               KC_LEFT, KC_DOWN, KC_RGHT, KC_NO,   KC_NO,
-                                                           KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS,
-                                                                    KC_NO,          KC_TRNS,
-                                                  KC_ACL0, KC_ACL1, KC_ACL2,        KC_TRNS, KC_TRNS, KC_TRNS
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_INS,  KC_HOME, KC_PGUP, KC_TRNS, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                             KC_TRNS, KC_DEL,  KC_END,  KC_PGDN, KC_TRNS, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_NO,   KC_NO,   KC_NO,   KC_UP,   KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                                               KC_RALT, KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT,
+                                                          KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS,
+                                                                   KC_TRNS,          KC_TRNS,
+                                                  KC_SPC, KC_TRNS, KC_TRNS,        KC_TRNS, KC_RCMD, KC_TRNS
   ),
   // Dvorak coding layer.  Moves various brackets and symbols to the right hand,
   // particularly optimizing for C-like programming languages, *assuming*
@@ -96,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_CAPS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                                               KC_TRNS, KC_HOME, KC_PGDN, KC_PGUP, KC_END,
-                                                          KC_TRNS, WEBUSB_PAIR,     KC_TRNS, KC_TRNS,
+                                                MAGIC_TOGGLE_NKRO, WEBUSB_PAIR,     KC_TRNS, KC_TRNS,
                                                                    KC_TRNS,         KC_TRNS,
                                                  KC_TRNS, KC_PENT, KC_TRNS,         KC_TRNS, KC_TRNS, KC_TRNS
   )
@@ -126,10 +125,10 @@ uint32_t layer_state_set_user(uint32_t state) {
         }
     }
 
-    // Enable NKRO iff the stenography layer is active.
-    if (keymap_config.nkro != (layer == L_STN)) {
+    // Force NKRO on when switching to the stenography layer.
+    if (layer == L_STN && !keymap_config.nkro) {
         clear_keyboard();  // prevent stuck keys
-        keymap_config.nkro = (layer == L_STN);
+        keymap_config.nkro = true;
     }
 
     return state;

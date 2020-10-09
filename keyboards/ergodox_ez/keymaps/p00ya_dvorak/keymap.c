@@ -1,7 +1,6 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 
-
 // Layers.
 #define L_NUM 1
 #define L_NAV 2
@@ -14,7 +13,7 @@
 #define KD_RBRC KC_EQL
 #define KD_LCBR KC_UNDS
 #define KD_RCBR KC_PLUS
-#define KD_EQL  KC_RBRC
+#define KD_EQL KC_RBRC
 #define KD_SLSH KC_LBRC
 #define KD_UNDS KC_DQUO
 #define KD_PLUS KC_RCBR
@@ -22,6 +21,9 @@
 
 // defined in bootmagic.c.
 extern keymap_config_t keymap_config;
+
+// user-defined state; not preserved across reboots.
+static struct { bool nkro : 1; } user_config;
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -109,7 +111,6 @@ void keyboard_post_init_user() {
     ergodox_led_all_set(LED_BRIGHTNESS_LO);
 }
 
-
 uint32_t layer_state_set_user(uint32_t state) {
     uint8_t layer = biton32(state);
     if (layer == L_FN) {
@@ -128,20 +129,49 @@ uint32_t layer_state_set_user(uint32_t state) {
     }
 
     // Force NKRO on when switching to the stenography layer.
-    if (layer == L_STN && !keymap_config.nkro) {
+    if (layer == L_STN) {
         clear_keyboard();  // prevent stuck keys
+        user_config.nkro   = keymap_config.nkro;
         keymap_config.nkro = true;
+    } else if (!user_config.nkro) {
+        keymap_config.nkro = user_config.nkro;
     }
 
     return state;
 };
+
+// Returns the brightness of LED 3, a conflation of scroll lock and NKRO status.
+uint8_t user_led_3_brightness(void) {
+    led_t leds = host_keyboard_led_state();
+
+    uint8_t brightness = LED_BRIGHTNESS_LO;
+    brightness += leds.scroll_lock ? 64 : 0;
+    brightness += user_config.nkro ? 176 : 0;
+    return brightness;
+}
 
 bool led_update_user(led_t led_state) {
     // Indicate the host LED status via the brightness of the 3 LEDs.  This will
     // only be visible if the LEDs are actually turned on by a relevant layer.
     ergodox_right_led_1_set(led_state.num_lock ? LED_BRIGHTNESS_HI : LED_BRIGHTNESS_LO);
     ergodox_right_led_2_set(led_state.caps_lock ? LED_BRIGHTNESS_HI : LED_BRIGHTNESS_LO);
-    ergodox_right_led_3_set(led_state.scroll_lock ? LED_BRIGHTNESS_HI : LED_BRIGHTNESS_LO);
+    ergodox_right_led_3_set(user_led_3_brightness());
 
+    return true;
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case MAGIC_TOGGLE_NKRO: {
+            if (record->event.pressed) {
+                user_config.nkro   = !user_config.nkro;
+                keymap_config.nkro = user_config.nkro;
+                ergodox_right_led_3_set(user_led_3_brightness());
+            }
+            return false;
+        }
+        default:
+            break;
+    }
     return true;
 }

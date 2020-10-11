@@ -29,10 +29,10 @@ Now, assuming you are software-remapping to Dvorak, the notable differences are:
 All the alpha-numeric keys are on the Base Layer, with some missing symbols are on the Coding Layer.  There are also convenience layers for the numpad, dirpad (10)
 
 1. Numpad: on the right hand, with `num 5` where `N` is on the base layer.
-2. Dirpad: on the right hand, with `⌦` where `H` is on the base layer).  Also places mousekeys on the left hand in an `ESDF`-style configuration.
-4. Coding: activated by holding the left `space` key; adds many of the missing pinky keys onto the right hand, including `{}[]()=+\|`, and applies a shift modifier to the number keys (for `!@#` etc.).
+2. Dirpad: on the right hand, with `⌦` where `H` is on the base layer).  Moves the arrow keys to the bottom right, and adds in the right-hand `control` and `alt` modifiers.
+4. Coding: activated by holding the left `space` key; adds many of the missing pinky keys onto the right hand, including `{}[]()=+\|`, and applies a shift modifier to the number keys (for `!@#` etc.).  Left-hand modifiers are duplicated onto the home row since the thumb is needed for the layer.
 5. Steno: "QWERTY" layout for stenography (e.g. Plover), but with pinky keys shifted down a row and thumb keys on the actual thumb cluster.  Also activates NKRO.
-6. Function: function keys on the top row, media keys below them, and Apple `fn`-modified equivalents for some other keys.  Also shows num/scroll/caps lock status via LED brightness.
+6. Function: function keys on the top row, media keys below them, and Apple `fn`-modified equivalents for some other keys.  Also shows num/scroll/caps lock and NKRO status via LED brightness.
 
 ## Download
 

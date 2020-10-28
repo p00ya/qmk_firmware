@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     MO(L_FN),       KC_LCTL,        OSM(MOD_LCTL),  KC_LALT,        KC_LCMD,                                                                                                        KC_RCMD,        KC_LEFT,        KC_DOWN,        KC_UP,          KC_RGHT,
                                                                                                     TG(L_STN),      KC_PSCR,        KC_HOME,        KC_END,
                                                                                                                     KC_PGUP,        KC_INS,
-                                                                                    LT(L_COD,KC_SPC),KC_ENT,        KC_PGDN,        KC_DEL,         KD_UNDS,        KC_SPC
+                                                                                    LT(L_COD,KC_SPC),KC_ENT,        KC_PGDN,        KC_DEL,         KC_ENT,         KC_SPC
   ),
   // Simulates a numpad with the 5-key aligned with QWERTY's J-key.
   // Num-zero and enter keys are duplicated to the thumb clusters.
@@ -58,9 +58,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                             KC_TRNS, KC_DEL,  KC_END,  KC_PGDN, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_NO,   KC_NO,   KC_NO,   KC_UP,   KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                                               KC_RALT, KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT,
-                                                          KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS,
-                                                                   KC_TRNS,          KC_TRNS,
-                                                  KC_SPC, KC_TRNS, KC_TRNS,        KC_TRNS, KC_RCMD, KC_TRNS
+                                                          KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS,
+                                                                   KC_TRNS,         KC_TRNS,
+                                                  KC_SPC, KC_TRNS, KC_TRNS,         KC_TRNS, KC_RCMD, KC_TRNS
   ),
   // Dvorak coding layer.  Moves various brackets and symbols to the right hand,
   // particularly optimizing for C-like programming languages, *assuming*
@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_TRNS, KD_LCBR, KD_RCBR, KC_PIPE, KC_BSLS,
     KC_TRNS, KC_LSFT, KC_LCTL, KC_LALT, KC_LCMD, KC_TRNS,                                             KC_TRNS, KC_LPRN, KC_RPRN, KD_EQL,  KC_ENT,  KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_0,    KD_LBRC, KD_RBRC, KC_TRNS, KD_PLUS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                                               KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                                               KD_UNDS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                                           KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS,
                                                                    KC_TRNS,         KC_TRNS,
                                                  KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS, KC_TRNS

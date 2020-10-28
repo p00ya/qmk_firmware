@@ -3774,13 +3774,11 @@
 										<key>ActionParam</key>
 										<dict>
 											<key>KeyboardHWID</key>
+											<integer>43</integer>
+											<key>USBKeyCode</key>
 											<integer>40</integer>
-											<key>MacKeyCode</key>
-											<integer>39</integer>
-											<key>Modifiers</key>
-											<integer>131330</integer>
 											<key>UsesMacKeyCode</key>
-											<true/>
+											<false/>
 											<key>shouldNotLockModifier</key>
 											<false/>
 										</dict>
@@ -3789,7 +3787,7 @@
 										<key>ActionType</key>
 										<string>ActionPressKeyCode</string>
 										<key>ID</key>
-										<string>Action.9C2A4B62-FAA8-4A96-9096-E10FBC08FC1B</string>
+										<string>Action.93983F59-E0E5-4D0F-AEB5-2679E55060E6</string>
 									</dict>
 								</array>
 								<key>isStickyKey</key>
@@ -3800,19 +3798,17 @@
 							<key>ActionType</key>
 							<string>ActionPerformKeyMacro</string>
 							<key>ID</key>
-							<string>Action.4EFEDB91-74CF-4540-9829-08203C92348D</string>
+							<string>Action.20D40F5C-1E7C-4131-981D-A3B90DF5CEDF</string>
 						</dict>
 					</array>
 					<key>ButtonType</key>
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
-					<key>DisplayText</key>
-					<string>_</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
-					<string>Button.11CCB712-AA48-468C-B5E8-902CAE05D484</string>
+					<string>Button.D6101628-49A1-44A0-B381-A4FE86E32F69</string>
 					<key>PanelObjectType</key>
 					<string>Button</string>
 					<key>Rect</key>
@@ -3874,7 +3870,7 @@
 			<key>ProductSupportType</key>
 			<string>VirtualKeyboard</string>
 			<key>Rect</key>
-			<string>{{0, 0}, {900, 285}}</string>
+			<string>{{0, 0}, {890, 275}}</string>
 			<key>ScanStyle</key>
 			<integer>0</integer>
 			<key>ShowPanelLocationString</key>

@@ -18,6 +18,9 @@
 #define KD_UNDS KC_DQUO
 #define KD_PLUS KC_RCBR
 #define KD_MINS KC_QUOT
+#define KD_DQUO LSFT(KC_Q)
+#define KD_COLN LSFT(KC_Z)
+#define KD_RABK LSFT(KC_E)
 
 // defined in bootmagic.c.
 extern keymap_config_t keymap_config;
@@ -66,10 +69,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // particularly optimizing for C-like programming languages, *assuming*
   // an additonal QWERTY -> Dvorak remapping in (OS) software.
   [L_COD] = LAYOUT_ergodox_pretty(
-    KC_TRNS, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC,                           KC_TRNS, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_TRNS, KD_LCBR, KD_RCBR, KC_PIPE, KC_BSLS,
+    KC_TRNS, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC,                           KC_TRNS, KC_CIRC, KC_AMPR, KC_ASTR, KD_LBRC, KD_RBRC, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_0,    KD_LCBR, KD_RCBR, KC_BSLS, KC_TRNS,
     KC_TRNS, KC_LSFT, KC_LCTL, KC_LALT, KC_LCMD, KC_TRNS,                                             KC_TRNS, KC_LPRN, KC_RPRN, KD_EQL,  KC_ENT,  KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_0,    KD_LBRC, KD_RBRC, KC_TRNS, KD_PLUS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_EXLM, KD_DQUO, KD_COLN, KD_RABK, KD_PLUS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                                               KD_UNDS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                                           KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS,
                                                                    KC_TRNS,         KC_TRNS,

@@ -20,15 +20,16 @@ The Base layer positions keys as close as possible to where they'd be on a (US-l
 Now, assuming you are software-remapping to Dvorak, the notable differences are:
 
 * `return` is on the thumb clusters
-* stretched right-pinky keys (`=`, `\` and brackets) are all missing; they're on the Coding Layer activated by the left thumb
-* `6` is on both hands, and `7` is directly above `G`
+* stretched right-pinky keys (`=`, `\` and brackets) are all missing; they're on the Coding Layer
+* `6` is on both hands; `7` is directly above `G`
 
 ## Additional Layers
 
 All the alpha-numeric keys are on the Base Layer, with some missing symbols are on the Coding Layer.  There are also convenience layers for the numpad and navigation cluster.
 
-1. Numpad: on the right hand, with `num 5` where `N` is on the base layer.
-2. Dirpad: on the right hand, with `⌦` where `H` is on the base layer).  Moves the arrow keys to the bottom right in the "inverted T" layout, and adds in the right-hand `control` and `alt` modifiers.
+1. Hardware Dvorak: replaces the base keys with their Dvorak equivalents, and also remaps the caps-lock key to send `control`.
+2. Numpad: on the right hand, with `num 5` where `N` is on the base layer.
+3. Dirpad: on the right hand, with `⌦` where `H` is on the base layer).  Moves the arrow keys to the bottom right, and adds in the right-hand `control` and `alt` modifiers.
 4. Coding: activated by holding the left `space` key; adds many of the missing pinky keys onto the right hand, including `{}[]()=+\|`, and applies a shift modifier to the number keys (for `!@#` etc.).  Left-hand modifiers are duplicated onto the home row since the thumb is needed for the layer.
 5. Steno: "QWERTY" layout for stenography (e.g. Plover), but with pinky keys shifted down a row and thumb keys on the actual thumb cluster.  Also activates NKRO.
 6. Function: function keys on the top row, media keys below them, and Apple `fn`-modified equivalents for some other keys.  Also shows num/scroll/caps lock and NKRO status via LED brightness.

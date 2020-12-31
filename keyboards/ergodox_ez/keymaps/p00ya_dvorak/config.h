@@ -15,5 +15,5 @@
 #define IGNORE_MOD_TAP_INTERRUPT
 
 
-// https://configure.ergodox-ez.com/ergodox-ez/layouts/vAdRO/65eKr/0
-#define FIRMWARE_VERSION u8"vAdRO/65eKr"
+// https://configure.ergodox-ez.com/ergodox-ez/layouts/vAdRO/j9bVY/0
+#define FIRMWARE_VERSION u8"vAdRO/j9bVY"

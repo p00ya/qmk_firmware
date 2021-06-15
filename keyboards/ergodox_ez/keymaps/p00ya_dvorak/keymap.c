@@ -22,6 +22,7 @@
 #define KD_MINS KC_QUOT
 #define KD_DQUO LSFT(KC_Q)
 #define KD_COLN LSFT(KC_Z)
+#define KD_LABK LSFT(KC_W)
 #define KD_RABK LSFT(KC_E)
 
 // defined in bootmagic.c.
@@ -86,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC,                           KC_TRNS, KC_CIRC, KC_AMPR, KC_ASTR, KC_LBRC, KC_RBRC, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_0,    KC_LCBR, KC_RCBR, KC_BSLS, KC_TRNS,
     KC_TRNS, KC_LSFT, KC_LCTL, KC_LALT, KC_LCMD, KC_TRNS,                                             KC_TRNS, KC_LPRN, KC_RPRN, KC_EQL,  KC_ENT,  KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_EXLM, KC_DQUO, KC_COLN, KC_RABK, KC_PLUS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_LABK, KC_EXLM, KC_DQUO, KC_COLN, KC_RABK, KC_PLUS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                                               KC_UNDS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                                           KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS,
                                                                    KC_TRNS,         KC_TRNS,
@@ -98,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KD_LBRC, KD_RBRC, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_TRNS, KD_LCBR, KD_RCBR, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                             KC_TRNS, KC_TRNS, KC_TRNS, KD_EQL,  KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_TRNS, KD_DQUO, KD_COLN, KD_RABK, KD_PLUS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KD_LABK, KC_TRNS, KD_DQUO, KD_COLN, KD_RABK, KD_PLUS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                                               KD_UNDS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                                           KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS,
                                                                    KC_TRNS,         KC_TRNS,

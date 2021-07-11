@@ -29,18 +29,32 @@
 extern keymap_config_t keymap_config;
 
 // user-defined state; not preserved across reboots.
-static struct { bool nkro : 1; } user_config;
+static struct {
+    // True if keyboard should use NKRO.  This is separate from
+    // keymap_config.nkro since it defines what the NKRO state should be after
+    // turning off the Stenography layer (which forces NKRO on).
+    bool nkro : 1;
+    // True if the modifier keys should be treated as one-shot modifiers.
+    // Cancelled after any non-modifier key.
+    bool oneshot_next : 1;
+} user_config;
+
+// User-defined keycodes.
+enum {
+    // One-shot next sequence of modifiers.
+    KC_1NXT = SAFE_RANGE,
+};
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Base layer should mostly act like a 60% US (QWERTY) layout, with some of
-  // the right pinky keys missing.
+  // the right pinky keys missing, and caps-lock remapped as ctrl.
   [0] = LAYOUT_ergodox_pretty(
     KC_GRAVE,       KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_6,                                           KC_TRNS,        KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_BSPC,
     KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           MO(L_NUM),                                      TT(L_NUM),      KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_LBRC,
-    KC_CAPS,        KC_A,           KC_S,           KC_D,           KC_F,           KC_G,                                                                           KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        KC_QUOT,
-    KC_LSFT,        KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,           OSM(MOD_LSFT),                                  TT(L_NAV),      KC_N,           KC_M,           KC_COMM,        KC_DOT,         KC_SLSH,        KC_RSFT,
-    MO(L_FN),       KC_ESC,         OSM(MOD_LCTL),  KC_LALT,        KC_LCMD,                                                                                                        KC_RCMD,        KC_LEFT,        KC_DOWN,        KC_UP,          KC_RGHT,
+    KC_LCTL,        KC_A,           KC_S,           KC_D,           KC_F,           KC_G,                                                                           KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        KC_QUOT,
+    KC_LSFT,        KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,           KC_CAPS,                                        TT(L_NAV),      KC_N,           KC_M,           KC_COMM,        KC_DOT,         KC_SLSH,        KC_RSFT,
+    MO(L_FN),       KC_ESC,         KC_1NXT,        KC_LALT,        KC_LCMD,                                                                                                        KC_RCMD,        KC_LEFT,        KC_DOWN,        KC_UP,          KC_RGHT,
                                                                                                     TG(L_STN),      KC_PSCR,        KC_HOME,        KC_END,
                                                                                                                     KC_PGUP,        KC_INS,
                                                                                     LT(L_DVC,KC_SPC),KC_ENT,        KC_PGDN,        KC_DEL,         KC_ENT,         KC_SPC
@@ -51,8 +65,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,                           KC_TRNS,   KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
     KC_TRNS, KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    MO(L_NUM),                      TT(L_NUM), KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_SLSH,
     KC_LCTL, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,                                               KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_MINS,
-    KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    OSM(MOD_LSFT),                  TT(L_NAV), KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_TRNS,
-    MO(L_FN),KC_ESC,OSM(MOD_LCTL),KC_LALT,KC_LCMD,                                                            KC_RCMD, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
+    KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_CAPS,                        TT(L_NAV), KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_TRNS,
+    MO(L_FN),KC_ESC,  KC_1NXT, KC_LALT, KC_LCMD,                                                     KC_RCMD, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
                                                          TG(L_STN), KC_PSCR,        KC_HOME, KC_END,
                                                                     KC_PGUP,        KC_INS,
                                          LT(L_COD,KC_SPC), KC_ENT,  KC_PGDN,        KC_DEL,  KC_ENT, KC_SPC
@@ -60,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Simulates a numpad with the 5-key aligned with QWERTY's J-key.
   // Num-zero and enter keys are duplicated to the thumb clusters.
   [L_NUM] = LAYOUT_ergodox_pretty(
-    KC_ESC,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                          KC_TRNS, KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS, KC_NO,   KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                          KC_TRNS, KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS, KC_NO,   KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                          KC_TRNS, KC_KP_7, KC_KP_8, KC_KP_9, KC_PPLS, KC_NO,   KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                            KC_KP_4, KC_KP_5, KC_KP_6, KC_PPLS, KC_NO,   KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                          KC_TRNS, KC_KP_1, KC_KP_2, KC_KP_3, KC_PENT, KC_NO,   KC_TRNS,
@@ -71,14 +85,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   // Dirpad / navigation pad on the right hand with a standard US layout.
   [L_NAV] = LAYOUT_ergodox_pretty(
-    KC_ESC,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_PSCR, KC_SLCK, KC_PAUS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_INS,  KC_HOME, KC_PGUP, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                             KC_TRNS, KC_DEL,  KC_END,  KC_PGDN, KC_TRNS, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_PSCR, KC_SLCK, KC_PAUS, KC_TRNS, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO,                             KC_TRNS, KC_TRNS, KC_INS,  KC_HOME, KC_PGUP, KC_TRNS, KC_TRNS,
+    KC_CAPS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                             KC_TRNS, KC_DEL,  KC_END,  KC_PGDN, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                           KC_TRNS, KC_TRNS, KC_NO,   KC_NO,   KC_NO,   KC_UP,   KC_TRNS,
-    KC_NO, KC_LCTL, KC_NO, KC_TRNS, KC_NO,                                                                     KC_RALT, KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT,
-                                                          KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS,
-                                                                   KC_TRNS,         KC_TRNS,
-                                                  KC_SPC, KC_TRNS, KC_TRNS,         KC_TRNS, KC_RCMD, KC_TRNS
+    KC_LCTL, KC_TRNS, KC_BTN1, KC_TRNS, KC_LALT,                                                               KC_RALT, KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT,
+                                                          KC_NO,   KC_NO,           KC_TRNS, KC_TRNS,
+                                                                   KC_WH_U,         KC_TRNS,
+                                                  KC_SPC, KC_TRNS, KC_WH_D,         KC_TRNS, KC_RCMD, KC_TRNS
   ),
   // Coding layer, for use when there is *no* OS remapping.
   // Moves various brackets and symbols to the right hand, particularly
@@ -231,8 +245,25 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
         }
+        case KC_1NXT: {
+            if (record->event.pressed) {
+                user_config.oneshot_next = true;
+            }
+            return false;
+        }
         default:
             break;
+    }
+
+    // Treat normal mod keys as oneshot modifiers if oneshot_next is set.
+    if (user_config.oneshot_next) {
+        if (IS_MOD(keycode) && record->event.pressed) {
+            // oneshot_mods will be cleared by send_keyboard_report in
+            // action_util.c.
+            set_oneshot_mods(MOD_BIT(keycode) | get_oneshot_mods());
+        } else if (IS_KEY(keycode)) {
+            user_config.oneshot_next = false;
+        }
     }
     return true;
 }

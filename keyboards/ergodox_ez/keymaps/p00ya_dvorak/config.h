@@ -14,6 +14,5 @@
 #define PERMISSIVE_HOLD
 #define IGNORE_MOD_TAP_INTERRUPT
 
-
-// https://configure.ergodox-ez.com/ergodox-ez/layouts/vAdRO/NKNOb/0
-#define FIRMWARE_VERSION u8"vAdRO/NKNOb"
+// https://configure.ergodox-ez.com/ergodox-ez/layouts/vAdRO/DrEl7/0
+#define FIRMWARE_VERSION u8"vAdRO/DrEl7"

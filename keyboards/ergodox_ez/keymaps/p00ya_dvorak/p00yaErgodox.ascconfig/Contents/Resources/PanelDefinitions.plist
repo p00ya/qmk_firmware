@@ -77,6 +77,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -129,6 +131,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -181,6 +185,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -233,6 +239,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -285,6 +293,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -337,6 +347,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -389,6 +401,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -410,6 +424,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>DisplayText</key>
 					<string> </string>
 					<key>FontSize</key>
@@ -464,6 +480,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -516,6 +534,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -568,6 +588,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -620,6 +642,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -672,6 +696,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -724,6 +750,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -776,6 +804,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -828,6 +858,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -880,6 +912,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -932,6 +966,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -984,6 +1020,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1036,6 +1074,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1088,6 +1128,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1140,6 +1182,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1192,6 +1236,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1244,6 +1290,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1296,6 +1344,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1348,6 +1398,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1369,11 +1421,11 @@
 										<key>ActionParam</key>
 										<dict>
 											<key>KeyboardHWID</key>
-											<integer>46</integer>
-											<key>USBKeyCode</key>
-											<integer>57</integer>
+											<integer>40</integer>
+											<key>MacKeyCode</key>
+											<integer>59</integer>
 											<key>UsesMacKeyCode</key>
-											<false/>
+											<true/>
 											<key>shouldNotLockModifier</key>
 											<false/>
 										</dict>
@@ -1382,7 +1434,7 @@
 										<key>ActionType</key>
 										<string>ActionPressKeyCode</string>
 										<key>ID</key>
-										<string>Action.75151270-1013-496A-8232-EA2CA9053E32</string>
+										<string>Action.5EFF016D-26CB-48F8-91C8-6B270736BC1C</string>
 									</dict>
 								</array>
 								<key>isStickyKey</key>
@@ -1393,17 +1445,21 @@
 							<key>ActionType</key>
 							<string>ActionPerformKeyMacro</string>
 							<key>ID</key>
-							<string>Action.1B38C523-5967-42A7-8FAE-EDD339157564</string>
+							<string>Action.54E9BAC7-B419-4869-BEC1-412F6CD4F269</string>
 						</dict>
 					</array>
 					<key>ButtonType</key>
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
+					<key>DisplayText</key>
+					<string></string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
-					<string>Button.F42F5A8B-8452-405D-80E2-5896514CA940</string>
+					<string>Button.11C6381F-851F-4D3F-86EB-7F4A6674A118</string>
 					<key>PanelObjectType</key>
 					<string>Button</string>
 					<key>Rect</key>
@@ -1452,6 +1508,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1504,6 +1562,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1556,6 +1616,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1608,6 +1670,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1660,6 +1724,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1681,6 +1747,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>DisplayText</key>
 					<string>❐n</string>
 					<key>FontSize</key>
@@ -1704,6 +1772,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>DisplayText</key>
 					<string>❐n</string>
 					<key>FontSize</key>
@@ -1758,6 +1828,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1810,6 +1882,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1862,6 +1936,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1914,6 +1990,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -1927,6 +2005,60 @@
 					<key>Actions</key>
 					<array>
 						<dict>
+							<key>ActionParam</key>
+							<dict>
+								<key>Events</key>
+								<array>
+									<dict>
+										<key>ActionParam</key>
+										<dict>
+											<key>KeyboardHWID</key>
+											<integer>46</integer>
+											<key>USBKeyCode</key>
+											<integer>57</integer>
+											<key>UsesMacKeyCode</key>
+											<false/>
+											<key>shouldNotLockModifier</key>
+											<false/>
+										</dict>
+										<key>ActionRecordedOffset</key>
+										<real>0.0</real>
+										<key>ActionType</key>
+										<string>ActionPressKeyCode</string>
+										<key>ID</key>
+										<string>Action.75151270-1013-496A-8232-EA2CA9053E32</string>
+									</dict>
+								</array>
+								<key>isStickyKey</key>
+								<false/>
+							</dict>
+							<key>ActionRecordedOffset</key>
+							<real>0.0</real>
+							<key>ActionType</key>
+							<string>ActionPerformKeyMacro</string>
+							<key>ID</key>
+							<string>Action.1B38C523-5967-42A7-8FAE-EDD339157564</string>
+						</dict>
+					</array>
+					<key>ButtonType</key>
+					<integer>0</integer>
+					<key>DisplayImageResourceIsTemplate</key>
+					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
+					<key>FontSize</key>
+					<real>22</real>
+					<key>ID</key>
+					<string>Button.F42F5A8B-8452-405D-80E2-5896514CA940</string>
+					<key>PanelObjectType</key>
+					<string>Button</string>
+					<key>Rect</key>
+					<string>{{285, 115}, {40, 60}}</string>
+				</dict>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<dict>
 							<key>ActionRecordedOffset</key>
 							<real>0.0</real>
 						</dict>
@@ -1935,6 +2067,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>DisplayText</key>
 					<string>❐d</string>
 					<key>FontSize</key>
@@ -1989,6 +2123,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -2041,6 +2177,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -2093,6 +2231,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -2145,6 +2285,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -2197,6 +2339,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -2249,6 +2393,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -2301,6 +2447,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -2353,6 +2501,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -2361,553 +2511,6 @@
 					<string>Button</string>
 					<key>Rect</key>
 					<string>{{240, 135}, {40, 40}}</string>
-				</dict>
-				<dict>
-					<key>Actions</key>
-					<array>
-						<dict>
-							<key>ActionParam</key>
-							<dict>
-								<key>Events</key>
-								<array>
-									<dict>
-										<key>ActionParam</key>
-										<dict>
-											<key>KeyboardHWID</key>
-											<integer>40</integer>
-											<key>MacKeyCode</key>
-											<integer>56</integer>
-											<key>UsesMacKeyCode</key>
-											<true/>
-											<key>shouldNotLockModifier</key>
-											<false/>
-										</dict>
-										<key>ActionRecordedOffset</key>
-										<real>0.0</real>
-										<key>ActionType</key>
-										<string>ActionPressKeyCode</string>
-										<key>ID</key>
-										<string>Action.5F30523F-1E49-4C95-8313-A360472F0FF2</string>
-									</dict>
-								</array>
-								<key>isStickyKey</key>
-								<false/>
-							</dict>
-							<key>ActionRecordedOffset</key>
-							<real>0.0</real>
-							<key>ActionType</key>
-							<string>ActionPerformKeyMacro</string>
-							<key>ID</key>
-							<string>Action.82A70C73-AD79-4232-9A2E-48C20963661E</string>
-						</dict>
-					</array>
-					<key>ButtonType</key>
-					<integer>0</integer>
-					<key>DisplayImageResourceIsTemplate</key>
-					<false/>
-					<key>DisplayText</key>
-					<string>⇧¹</string>
-					<key>FontSize</key>
-					<real>18</real>
-					<key>ID</key>
-					<string>Button.4C7FD015-5725-41A2-945C-E69DA64AD3DD</string>
-					<key>PanelObjectType</key>
-					<string>Button</string>
-					<key>Rect</key>
-					<string>{{285, 115}, {40, 60}}</string>
-				</dict>
-				<dict>
-					<key>Actions</key>
-					<array>
-						<dict>
-							<key>ActionRecordedOffset</key>
-							<real>0.0</real>
-						</dict>
-					</array>
-					<key>ButtonType</key>
-					<integer>0</integer>
-					<key>DisplayImageResourceIsTemplate</key>
-					<false/>
-					<key>DisplayText</key>
-					<string>❐s</string>
-					<key>FontSize</key>
-					<real>18</real>
-					<key>ID</key>
-					<string>Button.4D15AEF9-546B-4A10-A0C0-C5D28D0B2494</string>
-					<key>PanelObjectType</key>
-					<string>Button</string>
-					<key>Rect</key>
-					<string>{{340, 145}, {40, 40}}</string>
-				</dict>
-				<dict>
-					<key>Actions</key>
-					<array>
-						<dict>
-							<key>ActionParam</key>
-							<dict>
-								<key>Events</key>
-								<array>
-									<dict>
-										<key>ActionParam</key>
-										<dict>
-											<key>KeyboardHWID</key>
-											<integer>43</integer>
-											<key>USBKeyCode</key>
-											<integer>104</integer>
-											<key>UsesMacKeyCode</key>
-											<false/>
-											<key>shouldNotLockModifier</key>
-											<false/>
-										</dict>
-										<key>ActionRecordedOffset</key>
-										<real>0.0</real>
-										<key>ActionType</key>
-										<string>ActionPressKeyCode</string>
-										<key>ID</key>
-										<string>Action.BBFEBA28-954A-4B14-985F-47FAE743EDC5</string>
-									</dict>
-								</array>
-								<key>isStickyKey</key>
-								<false/>
-							</dict>
-							<key>ActionRecordedOffset</key>
-							<real>0.0</real>
-							<key>ActionType</key>
-							<string>ActionPerformKeyMacro</string>
-							<key>ID</key>
-							<string>Action.C037DD6D-935A-4476-8F5A-585AAE0FF2A8</string>
-						</dict>
-					</array>
-					<key>ButtonType</key>
-					<integer>0</integer>
-					<key>DisplayImageResourceIsTemplate</key>
-					<false/>
-					<key>DisplayText</key>
-					<string>sys</string>
-					<key>FontSize</key>
-					<real>20</real>
-					<key>ID</key>
-					<string>Button.AD46BB43-EB89-4309-BA22-CBD9F48E8870</string>
-					<key>PanelObjectType</key>
-					<string>Button</string>
-					<key>Rect</key>
-					<string>{{385, 145}, {40, 40}}</string>
-				</dict>
-				<dict>
-					<key>Actions</key>
-					<array>
-						<dict>
-							<key>ActionParam</key>
-							<dict>
-								<key>Events</key>
-								<array>
-									<dict>
-										<key>ActionParam</key>
-										<dict>
-											<key>KeyboardHWID</key>
-											<integer>46</integer>
-											<key>USBKeyCode</key>
-											<integer>74</integer>
-											<key>UsesMacKeyCode</key>
-											<false/>
-											<key>shouldNotLockModifier</key>
-											<false/>
-										</dict>
-										<key>ActionRecordedOffset</key>
-										<real>0.0</real>
-										<key>ActionType</key>
-										<string>ActionPressKeyCode</string>
-										<key>ID</key>
-										<string>Action.75A641CF-FC21-43DC-8CA8-DBB0D50BF3EC</string>
-									</dict>
-								</array>
-								<key>isStickyKey</key>
-								<false/>
-							</dict>
-							<key>ActionRecordedOffset</key>
-							<real>0.0</real>
-							<key>ActionType</key>
-							<string>ActionPerformKeyMacro</string>
-							<key>ID</key>
-							<string>Action.F4694226-739F-450E-8C70-993023F46ECD</string>
-						</dict>
-					</array>
-					<key>ButtonType</key>
-					<integer>0</integer>
-					<key>DisplayImageResourceIsTemplate</key>
-					<false/>
-					<key>FontSize</key>
-					<real>22</real>
-					<key>ID</key>
-					<string>Button.9786E911-3B2A-430E-801C-FDC125E812A5</string>
-					<key>PanelObjectType</key>
-					<string>Button</string>
-					<key>Rect</key>
-					<string>{{465, 145}, {40, 40}}</string>
-				</dict>
-				<dict>
-					<key>Actions</key>
-					<array>
-						<dict>
-							<key>ActionParam</key>
-							<dict>
-								<key>Events</key>
-								<array>
-									<dict>
-										<key>ActionParam</key>
-										<dict>
-											<key>KeyboardHWID</key>
-											<integer>46</integer>
-											<key>USBKeyCode</key>
-											<integer>77</integer>
-											<key>UsesMacKeyCode</key>
-											<false/>
-											<key>shouldNotLockModifier</key>
-											<false/>
-										</dict>
-										<key>ActionRecordedOffset</key>
-										<real>0.0</real>
-										<key>ActionType</key>
-										<string>ActionPressKeyCode</string>
-										<key>ID</key>
-										<string>Action.E39F5F1F-2FD9-44B8-A075-4051A5B55B1F</string>
-									</dict>
-								</array>
-								<key>isStickyKey</key>
-								<false/>
-							</dict>
-							<key>ActionRecordedOffset</key>
-							<real>0.0</real>
-							<key>ActionType</key>
-							<string>ActionPerformKeyMacro</string>
-							<key>ID</key>
-							<string>Action.D50F1B3B-2B73-4898-B24B-FC2D5089D8BC</string>
-						</dict>
-					</array>
-					<key>ButtonType</key>
-					<integer>0</integer>
-					<key>DisplayImageResourceIsTemplate</key>
-					<false/>
-					<key>FontSize</key>
-					<real>22</real>
-					<key>ID</key>
-					<string>Button.6B7F9B39-BBB0-457E-BA0E-D65383EDACDC</string>
-					<key>PanelObjectType</key>
-					<string>Button</string>
-					<key>Rect</key>
-					<string>{{510, 145}, {40, 40}}</string>
-				</dict>
-				<dict>
-					<key>Actions</key>
-					<array>
-						<dict>
-							<key>ActionParam</key>
-							<dict>
-								<key>Events</key>
-								<array>
-									<dict>
-										<key>ActionParam</key>
-										<dict>
-											<key>KeyboardHWID</key>
-											<integer>43</integer>
-											<key>USBKeyCode</key>
-											<integer>17</integer>
-											<key>UsesMacKeyCode</key>
-											<false/>
-											<key>shouldNotLockModifier</key>
-											<false/>
-										</dict>
-										<key>ActionRecordedOffset</key>
-										<real>0.0</real>
-										<key>ActionType</key>
-										<string>ActionPressKeyCode</string>
-										<key>ID</key>
-										<string>Action.2DC745EF-9FF2-43B1-B22A-26FE24E3D2AE</string>
-									</dict>
-								</array>
-								<key>isStickyKey</key>
-								<false/>
-							</dict>
-							<key>ActionRecordedOffset</key>
-							<real>0.0</real>
-							<key>ActionType</key>
-							<string>ActionPerformKeyMacro</string>
-							<key>ID</key>
-							<string>Action.07E09A87-E7E2-411E-BE96-3897E3D9BEFF</string>
-						</dict>
-					</array>
-					<key>ButtonType</key>
-					<integer>0</integer>
-					<key>DisplayImageResourceIsTemplate</key>
-					<false/>
-					<key>FontSize</key>
-					<real>22</real>
-					<key>ID</key>
-					<string>Button.5D4529AB-3851-4497-AFA8-131EDF31CE7E</string>
-					<key>PanelObjectType</key>
-					<string>Button</string>
-					<key>Rect</key>
-					<string>{{610, 135}, {40, 40}}</string>
-				</dict>
-				<dict>
-					<key>Actions</key>
-					<array>
-						<dict>
-							<key>ActionParam</key>
-							<dict>
-								<key>Events</key>
-								<array>
-									<dict>
-										<key>ActionParam</key>
-										<dict>
-											<key>KeyboardHWID</key>
-											<integer>43</integer>
-											<key>USBKeyCode</key>
-											<integer>16</integer>
-											<key>UsesMacKeyCode</key>
-											<false/>
-											<key>shouldNotLockModifier</key>
-											<false/>
-										</dict>
-										<key>ActionRecordedOffset</key>
-										<real>0.0</real>
-										<key>ActionType</key>
-										<string>ActionPressKeyCode</string>
-										<key>ID</key>
-										<string>Action.D2B0A368-A72E-462B-9B73-E8BD7EBA74C8</string>
-									</dict>
-								</array>
-								<key>isStickyKey</key>
-								<false/>
-							</dict>
-							<key>ActionRecordedOffset</key>
-							<real>0.0</real>
-							<key>ActionType</key>
-							<string>ActionPerformKeyMacro</string>
-							<key>ID</key>
-							<string>Action.6DF955CD-E2D6-4920-8FD8-D43BF33008AB</string>
-						</dict>
-					</array>
-					<key>ButtonType</key>
-					<integer>0</integer>
-					<key>DisplayImageResourceIsTemplate</key>
-					<false/>
-					<key>FontSize</key>
-					<real>22</real>
-					<key>ID</key>
-					<string>Button.28BDA7E7-9D39-4292-8DF0-0D5A00E2E387</string>
-					<key>PanelObjectType</key>
-					<string>Button</string>
-					<key>Rect</key>
-					<string>{{655, 135}, {40, 40}}</string>
-				</dict>
-				<dict>
-					<key>Actions</key>
-					<array>
-						<dict>
-							<key>ActionParam</key>
-							<dict>
-								<key>Events</key>
-								<array>
-									<dict>
-										<key>ActionParam</key>
-										<dict>
-											<key>KeyboardHWID</key>
-											<integer>43</integer>
-											<key>USBKeyCode</key>
-											<integer>54</integer>
-											<key>UsesMacKeyCode</key>
-											<false/>
-											<key>shouldNotLockModifier</key>
-											<false/>
-										</dict>
-										<key>ActionRecordedOffset</key>
-										<real>0.0</real>
-										<key>ActionType</key>
-										<string>ActionPressKeyCode</string>
-										<key>ID</key>
-										<string>Action.032AE84F-391C-4E1B-8CAC-CA84F5BE29C6</string>
-									</dict>
-								</array>
-								<key>isStickyKey</key>
-								<false/>
-							</dict>
-							<key>ActionRecordedOffset</key>
-							<real>0.0</real>
-							<key>ActionType</key>
-							<string>ActionPerformKeyMacro</string>
-							<key>ID</key>
-							<string>Action.A2385991-4563-4710-A8A5-9D4E31DE48DF</string>
-						</dict>
-					</array>
-					<key>ButtonType</key>
-					<integer>0</integer>
-					<key>DisplayImageResourceIsTemplate</key>
-					<false/>
-					<key>FontSize</key>
-					<real>22</real>
-					<key>ID</key>
-					<string>Button.7AE3332A-94FE-4D6B-8420-4F56F965F59B</string>
-					<key>PanelObjectType</key>
-					<string>Button</string>
-					<key>Rect</key>
-					<string>{{700, 135}, {40, 40}}</string>
-				</dict>
-				<dict>
-					<key>Actions</key>
-					<array>
-						<dict>
-							<key>ActionParam</key>
-							<dict>
-								<key>Events</key>
-								<array>
-									<dict>
-										<key>ActionParam</key>
-										<dict>
-											<key>KeyboardHWID</key>
-											<integer>43</integer>
-											<key>USBKeyCode</key>
-											<integer>55</integer>
-											<key>UsesMacKeyCode</key>
-											<false/>
-											<key>shouldNotLockModifier</key>
-											<false/>
-										</dict>
-										<key>ActionRecordedOffset</key>
-										<real>0.0</real>
-										<key>ActionType</key>
-										<string>ActionPressKeyCode</string>
-										<key>ID</key>
-										<string>Action.76108278-DE95-41CC-B13A-C74961C550C1</string>
-									</dict>
-								</array>
-								<key>isStickyKey</key>
-								<false/>
-							</dict>
-							<key>ActionRecordedOffset</key>
-							<real>0.0</real>
-							<key>ActionType</key>
-							<string>ActionPerformKeyMacro</string>
-							<key>ID</key>
-							<string>Action.1CC874AA-EABC-43B0-9132-D7536C636456</string>
-						</dict>
-					</array>
-					<key>ButtonType</key>
-					<integer>0</integer>
-					<key>DisplayImageResourceIsTemplate</key>
-					<false/>
-					<key>FontSize</key>
-					<real>22</real>
-					<key>ID</key>
-					<string>Button.0E9D55EC-674D-4BCF-B651-47C85DD4693E</string>
-					<key>PanelObjectType</key>
-					<string>Button</string>
-					<key>Rect</key>
-					<string>{{745, 135}, {40, 40}}</string>
-				</dict>
-				<dict>
-					<key>Actions</key>
-					<array>
-						<dict>
-							<key>ActionParam</key>
-							<dict>
-								<key>Events</key>
-								<array>
-									<dict>
-										<key>ActionParam</key>
-										<dict>
-											<key>KeyboardHWID</key>
-											<integer>43</integer>
-											<key>USBKeyCode</key>
-											<integer>56</integer>
-											<key>UsesMacKeyCode</key>
-											<false/>
-											<key>shouldNotLockModifier</key>
-											<false/>
-										</dict>
-										<key>ActionRecordedOffset</key>
-										<real>0.0</real>
-										<key>ActionType</key>
-										<string>ActionPressKeyCode</string>
-										<key>ID</key>
-										<string>Action.0E54B417-4853-449D-8CF2-88460A61F3D8</string>
-									</dict>
-								</array>
-								<key>isStickyKey</key>
-								<false/>
-							</dict>
-							<key>ActionRecordedOffset</key>
-							<real>0.0</real>
-							<key>ActionType</key>
-							<string>ActionPerformKeyMacro</string>
-							<key>ID</key>
-							<string>Action.87C3AE65-1639-438D-B1BC-D02AA2834388</string>
-						</dict>
-					</array>
-					<key>ButtonType</key>
-					<integer>0</integer>
-					<key>DisplayImageResourceIsTemplate</key>
-					<false/>
-					<key>FontSize</key>
-					<real>22</real>
-					<key>ID</key>
-					<string>Button.33FF3507-1360-4A56-82CA-092FF3687EEE</string>
-					<key>PanelObjectType</key>
-					<string>Button</string>
-					<key>Rect</key>
-					<string>{{790, 135}, {40, 40}}</string>
-				</dict>
-				<dict>
-					<key>Actions</key>
-					<array>
-						<dict>
-							<key>ActionParam</key>
-							<dict>
-								<key>Events</key>
-								<array>
-									<dict>
-										<key>ActionParam</key>
-										<dict>
-											<key>KeyboardHWID</key>
-											<integer>43</integer>
-											<key>USBKeyCode</key>
-											<integer>225</integer>
-											<key>UsesMacKeyCode</key>
-											<false/>
-											<key>shouldNotLockModifier</key>
-											<false/>
-										</dict>
-										<key>ActionRecordedOffset</key>
-										<real>0.0</real>
-										<key>ActionType</key>
-										<string>ActionPressKeyCode</string>
-										<key>ID</key>
-										<string>Action.8C9B2658-02F9-4EFA-AE1A-F41B85D4F2A9</string>
-									</dict>
-								</array>
-								<key>isStickyKey</key>
-								<false/>
-							</dict>
-							<key>ActionRecordedOffset</key>
-							<real>0.0</real>
-							<key>ActionType</key>
-							<string>ActionPerformKeyMacro</string>
-							<key>ID</key>
-							<string>Action.B7B21166-8E84-480C-B910-17306861EDCB</string>
-						</dict>
-					</array>
-					<key>ButtonType</key>
-					<integer>0</integer>
-					<key>DisplayImageResourceIsTemplate</key>
-					<false/>
-					<key>FontSize</key>
-					<real>22</real>
-					<key>ID</key>
-					<string>Button.9107A76A-8B46-4CF9-93D7-FABC75AFE0EB</string>
-					<key>PanelObjectType</key>
-					<string>Button</string>
-					<key>Rect</key>
-					<string>{{835, 135}, {55, 40}}</string>
 				</dict>
 				<dict>
 					<key>Actions</key>
@@ -2952,6 +2555,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>20</real>
 					<key>ID</key>
@@ -3004,6 +2609,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>DisplayText</key>
 					<string>⎋</string>
 					<key>FontSize</key>
@@ -3016,54 +2623,18 @@
 					<string>{{60, 180}, {40, 40}}</string>
 				</dict>
 				<dict>
-					<key>Actions</key>
-					<array>
-						<dict>
-							<key>ActionParam</key>
-							<dict>
-								<key>Events</key>
-								<array>
-									<dict>
-										<key>ActionParam</key>
-										<dict>
-											<key>KeyboardHWID</key>
-											<integer>40</integer>
-											<key>MacKeyCode</key>
-											<integer>59</integer>
-											<key>UsesMacKeyCode</key>
-											<true/>
-											<key>shouldNotLockModifier</key>
-											<false/>
-										</dict>
-										<key>ActionRecordedOffset</key>
-										<real>0.0</real>
-										<key>ActionType</key>
-										<string>ActionPressKeyCode</string>
-										<key>ID</key>
-										<string>Action.5EFF016D-26CB-48F8-91C8-6B270736BC1C</string>
-									</dict>
-								</array>
-								<key>isStickyKey</key>
-								<false/>
-							</dict>
-							<key>ActionRecordedOffset</key>
-							<real>0.0</real>
-							<key>ActionType</key>
-							<string>ActionPerformKeyMacro</string>
-							<key>ID</key>
-							<string>Action.54E9BAC7-B419-4869-BEC1-412F6CD4F269</string>
-						</dict>
-					</array>
 					<key>ButtonType</key>
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>DisplayText</key>
-					<string>⌃¹</string>
+					<string>_¹</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
-					<string>Button.11C6381F-851F-4D3F-86EB-7F4A6674A118</string>
+					<string>Button.26299CCC-D91B-44F2-9F04-0AA873F67F05</string>
 					<key>PanelObjectType</key>
 					<string>Button</string>
 					<key>Rect</key>
@@ -3112,6 +2683,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>DisplayTextLocation</key>
 					<string>DisplayInside</string>
 					<key>DisplayTextPosition</key>
@@ -3168,6 +2741,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3176,6 +2751,519 @@
 					<string>Button</string>
 					<key>Rect</key>
 					<string>{{195, 180}, {40, 40}}</string>
+				</dict>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<dict>
+							<key>ActionRecordedOffset</key>
+							<real>0.0</real>
+						</dict>
+					</array>
+					<key>ButtonType</key>
+					<integer>0</integer>
+					<key>DisplayImageResourceIsTemplate</key>
+					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
+					<key>DisplayText</key>
+					<string>❐s</string>
+					<key>FontSize</key>
+					<real>18</real>
+					<key>ID</key>
+					<string>Button.4D15AEF9-546B-4A10-A0C0-C5D28D0B2494</string>
+					<key>PanelObjectType</key>
+					<string>Button</string>
+					<key>Rect</key>
+					<string>{{340, 145}, {40, 40}}</string>
+				</dict>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<dict>
+							<key>ActionParam</key>
+							<dict>
+								<key>Events</key>
+								<array>
+									<dict>
+										<key>ActionParam</key>
+										<dict>
+											<key>KeyboardHWID</key>
+											<integer>43</integer>
+											<key>USBKeyCode</key>
+											<integer>104</integer>
+											<key>UsesMacKeyCode</key>
+											<false/>
+											<key>shouldNotLockModifier</key>
+											<false/>
+										</dict>
+										<key>ActionRecordedOffset</key>
+										<real>0.0</real>
+										<key>ActionType</key>
+										<string>ActionPressKeyCode</string>
+										<key>ID</key>
+										<string>Action.BBFEBA28-954A-4B14-985F-47FAE743EDC5</string>
+									</dict>
+								</array>
+								<key>isStickyKey</key>
+								<false/>
+							</dict>
+							<key>ActionRecordedOffset</key>
+							<real>0.0</real>
+							<key>ActionType</key>
+							<string>ActionPerformKeyMacro</string>
+							<key>ID</key>
+							<string>Action.C037DD6D-935A-4476-8F5A-585AAE0FF2A8</string>
+						</dict>
+					</array>
+					<key>ButtonType</key>
+					<integer>0</integer>
+					<key>DisplayImageResourceIsTemplate</key>
+					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
+					<key>DisplayText</key>
+					<string>sys</string>
+					<key>FontSize</key>
+					<real>20</real>
+					<key>ID</key>
+					<string>Button.AD46BB43-EB89-4309-BA22-CBD9F48E8870</string>
+					<key>PanelObjectType</key>
+					<string>Button</string>
+					<key>Rect</key>
+					<string>{{385, 145}, {40, 40}}</string>
+				</dict>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<dict>
+							<key>ActionParam</key>
+							<dict>
+								<key>Events</key>
+								<array>
+									<dict>
+										<key>ActionParam</key>
+										<dict>
+											<key>KeyboardHWID</key>
+											<integer>46</integer>
+											<key>USBKeyCode</key>
+											<integer>74</integer>
+											<key>UsesMacKeyCode</key>
+											<false/>
+											<key>shouldNotLockModifier</key>
+											<false/>
+										</dict>
+										<key>ActionRecordedOffset</key>
+										<real>0.0</real>
+										<key>ActionType</key>
+										<string>ActionPressKeyCode</string>
+										<key>ID</key>
+										<string>Action.75A641CF-FC21-43DC-8CA8-DBB0D50BF3EC</string>
+									</dict>
+								</array>
+								<key>isStickyKey</key>
+								<false/>
+							</dict>
+							<key>ActionRecordedOffset</key>
+							<real>0.0</real>
+							<key>ActionType</key>
+							<string>ActionPerformKeyMacro</string>
+							<key>ID</key>
+							<string>Action.F4694226-739F-450E-8C70-993023F46ECD</string>
+						</dict>
+					</array>
+					<key>ButtonType</key>
+					<integer>0</integer>
+					<key>DisplayImageResourceIsTemplate</key>
+					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
+					<key>FontSize</key>
+					<real>22</real>
+					<key>ID</key>
+					<string>Button.9786E911-3B2A-430E-801C-FDC125E812A5</string>
+					<key>PanelObjectType</key>
+					<string>Button</string>
+					<key>Rect</key>
+					<string>{{465, 145}, {40, 40}}</string>
+				</dict>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<dict>
+							<key>ActionParam</key>
+							<dict>
+								<key>Events</key>
+								<array>
+									<dict>
+										<key>ActionParam</key>
+										<dict>
+											<key>KeyboardHWID</key>
+											<integer>46</integer>
+											<key>USBKeyCode</key>
+											<integer>77</integer>
+											<key>UsesMacKeyCode</key>
+											<false/>
+											<key>shouldNotLockModifier</key>
+											<false/>
+										</dict>
+										<key>ActionRecordedOffset</key>
+										<real>0.0</real>
+										<key>ActionType</key>
+										<string>ActionPressKeyCode</string>
+										<key>ID</key>
+										<string>Action.E39F5F1F-2FD9-44B8-A075-4051A5B55B1F</string>
+									</dict>
+								</array>
+								<key>isStickyKey</key>
+								<false/>
+							</dict>
+							<key>ActionRecordedOffset</key>
+							<real>0.0</real>
+							<key>ActionType</key>
+							<string>ActionPerformKeyMacro</string>
+							<key>ID</key>
+							<string>Action.D50F1B3B-2B73-4898-B24B-FC2D5089D8BC</string>
+						</dict>
+					</array>
+					<key>ButtonType</key>
+					<integer>0</integer>
+					<key>DisplayImageResourceIsTemplate</key>
+					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
+					<key>FontSize</key>
+					<real>22</real>
+					<key>ID</key>
+					<string>Button.6B7F9B39-BBB0-457E-BA0E-D65383EDACDC</string>
+					<key>PanelObjectType</key>
+					<string>Button</string>
+					<key>Rect</key>
+					<string>{{510, 145}, {40, 40}}</string>
+				</dict>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<dict>
+							<key>ActionParam</key>
+							<dict>
+								<key>Events</key>
+								<array>
+									<dict>
+										<key>ActionParam</key>
+										<dict>
+											<key>KeyboardHWID</key>
+											<integer>43</integer>
+											<key>USBKeyCode</key>
+											<integer>17</integer>
+											<key>UsesMacKeyCode</key>
+											<false/>
+											<key>shouldNotLockModifier</key>
+											<false/>
+										</dict>
+										<key>ActionRecordedOffset</key>
+										<real>0.0</real>
+										<key>ActionType</key>
+										<string>ActionPressKeyCode</string>
+										<key>ID</key>
+										<string>Action.2DC745EF-9FF2-43B1-B22A-26FE24E3D2AE</string>
+									</dict>
+								</array>
+								<key>isStickyKey</key>
+								<false/>
+							</dict>
+							<key>ActionRecordedOffset</key>
+							<real>0.0</real>
+							<key>ActionType</key>
+							<string>ActionPerformKeyMacro</string>
+							<key>ID</key>
+							<string>Action.07E09A87-E7E2-411E-BE96-3897E3D9BEFF</string>
+						</dict>
+					</array>
+					<key>ButtonType</key>
+					<integer>0</integer>
+					<key>DisplayImageResourceIsTemplate</key>
+					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
+					<key>FontSize</key>
+					<real>22</real>
+					<key>ID</key>
+					<string>Button.5D4529AB-3851-4497-AFA8-131EDF31CE7E</string>
+					<key>PanelObjectType</key>
+					<string>Button</string>
+					<key>Rect</key>
+					<string>{{610, 135}, {40, 40}}</string>
+				</dict>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<dict>
+							<key>ActionParam</key>
+							<dict>
+								<key>Events</key>
+								<array>
+									<dict>
+										<key>ActionParam</key>
+										<dict>
+											<key>KeyboardHWID</key>
+											<integer>43</integer>
+											<key>USBKeyCode</key>
+											<integer>16</integer>
+											<key>UsesMacKeyCode</key>
+											<false/>
+											<key>shouldNotLockModifier</key>
+											<false/>
+										</dict>
+										<key>ActionRecordedOffset</key>
+										<real>0.0</real>
+										<key>ActionType</key>
+										<string>ActionPressKeyCode</string>
+										<key>ID</key>
+										<string>Action.D2B0A368-A72E-462B-9B73-E8BD7EBA74C8</string>
+									</dict>
+								</array>
+								<key>isStickyKey</key>
+								<false/>
+							</dict>
+							<key>ActionRecordedOffset</key>
+							<real>0.0</real>
+							<key>ActionType</key>
+							<string>ActionPerformKeyMacro</string>
+							<key>ID</key>
+							<string>Action.6DF955CD-E2D6-4920-8FD8-D43BF33008AB</string>
+						</dict>
+					</array>
+					<key>ButtonType</key>
+					<integer>0</integer>
+					<key>DisplayImageResourceIsTemplate</key>
+					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
+					<key>FontSize</key>
+					<real>22</real>
+					<key>ID</key>
+					<string>Button.28BDA7E7-9D39-4292-8DF0-0D5A00E2E387</string>
+					<key>PanelObjectType</key>
+					<string>Button</string>
+					<key>Rect</key>
+					<string>{{655, 135}, {40, 40}}</string>
+				</dict>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<dict>
+							<key>ActionParam</key>
+							<dict>
+								<key>Events</key>
+								<array>
+									<dict>
+										<key>ActionParam</key>
+										<dict>
+											<key>KeyboardHWID</key>
+											<integer>43</integer>
+											<key>USBKeyCode</key>
+											<integer>54</integer>
+											<key>UsesMacKeyCode</key>
+											<false/>
+											<key>shouldNotLockModifier</key>
+											<false/>
+										</dict>
+										<key>ActionRecordedOffset</key>
+										<real>0.0</real>
+										<key>ActionType</key>
+										<string>ActionPressKeyCode</string>
+										<key>ID</key>
+										<string>Action.032AE84F-391C-4E1B-8CAC-CA84F5BE29C6</string>
+									</dict>
+								</array>
+								<key>isStickyKey</key>
+								<false/>
+							</dict>
+							<key>ActionRecordedOffset</key>
+							<real>0.0</real>
+							<key>ActionType</key>
+							<string>ActionPerformKeyMacro</string>
+							<key>ID</key>
+							<string>Action.A2385991-4563-4710-A8A5-9D4E31DE48DF</string>
+						</dict>
+					</array>
+					<key>ButtonType</key>
+					<integer>0</integer>
+					<key>DisplayImageResourceIsTemplate</key>
+					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
+					<key>FontSize</key>
+					<real>22</real>
+					<key>ID</key>
+					<string>Button.7AE3332A-94FE-4D6B-8420-4F56F965F59B</string>
+					<key>PanelObjectType</key>
+					<string>Button</string>
+					<key>Rect</key>
+					<string>{{700, 135}, {40, 40}}</string>
+				</dict>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<dict>
+							<key>ActionParam</key>
+							<dict>
+								<key>Events</key>
+								<array>
+									<dict>
+										<key>ActionParam</key>
+										<dict>
+											<key>KeyboardHWID</key>
+											<integer>43</integer>
+											<key>USBKeyCode</key>
+											<integer>55</integer>
+											<key>UsesMacKeyCode</key>
+											<false/>
+											<key>shouldNotLockModifier</key>
+											<false/>
+										</dict>
+										<key>ActionRecordedOffset</key>
+										<real>0.0</real>
+										<key>ActionType</key>
+										<string>ActionPressKeyCode</string>
+										<key>ID</key>
+										<string>Action.76108278-DE95-41CC-B13A-C74961C550C1</string>
+									</dict>
+								</array>
+								<key>isStickyKey</key>
+								<false/>
+							</dict>
+							<key>ActionRecordedOffset</key>
+							<real>0.0</real>
+							<key>ActionType</key>
+							<string>ActionPerformKeyMacro</string>
+							<key>ID</key>
+							<string>Action.1CC874AA-EABC-43B0-9132-D7536C636456</string>
+						</dict>
+					</array>
+					<key>ButtonType</key>
+					<integer>0</integer>
+					<key>DisplayImageResourceIsTemplate</key>
+					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
+					<key>FontSize</key>
+					<real>22</real>
+					<key>ID</key>
+					<string>Button.0E9D55EC-674D-4BCF-B651-47C85DD4693E</string>
+					<key>PanelObjectType</key>
+					<string>Button</string>
+					<key>Rect</key>
+					<string>{{745, 135}, {40, 40}}</string>
+				</dict>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<dict>
+							<key>ActionParam</key>
+							<dict>
+								<key>Events</key>
+								<array>
+									<dict>
+										<key>ActionParam</key>
+										<dict>
+											<key>KeyboardHWID</key>
+											<integer>43</integer>
+											<key>USBKeyCode</key>
+											<integer>56</integer>
+											<key>UsesMacKeyCode</key>
+											<false/>
+											<key>shouldNotLockModifier</key>
+											<false/>
+										</dict>
+										<key>ActionRecordedOffset</key>
+										<real>0.0</real>
+										<key>ActionType</key>
+										<string>ActionPressKeyCode</string>
+										<key>ID</key>
+										<string>Action.0E54B417-4853-449D-8CF2-88460A61F3D8</string>
+									</dict>
+								</array>
+								<key>isStickyKey</key>
+								<false/>
+							</dict>
+							<key>ActionRecordedOffset</key>
+							<real>0.0</real>
+							<key>ActionType</key>
+							<string>ActionPerformKeyMacro</string>
+							<key>ID</key>
+							<string>Action.87C3AE65-1639-438D-B1BC-D02AA2834388</string>
+						</dict>
+					</array>
+					<key>ButtonType</key>
+					<integer>0</integer>
+					<key>DisplayImageResourceIsTemplate</key>
+					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
+					<key>FontSize</key>
+					<real>22</real>
+					<key>ID</key>
+					<string>Button.33FF3507-1360-4A56-82CA-092FF3687EEE</string>
+					<key>PanelObjectType</key>
+					<string>Button</string>
+					<key>Rect</key>
+					<string>{{790, 135}, {40, 40}}</string>
+				</dict>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<dict>
+							<key>ActionParam</key>
+							<dict>
+								<key>Events</key>
+								<array>
+									<dict>
+										<key>ActionParam</key>
+										<dict>
+											<key>KeyboardHWID</key>
+											<integer>43</integer>
+											<key>USBKeyCode</key>
+											<integer>225</integer>
+											<key>UsesMacKeyCode</key>
+											<false/>
+											<key>shouldNotLockModifier</key>
+											<false/>
+										</dict>
+										<key>ActionRecordedOffset</key>
+										<real>0.0</real>
+										<key>ActionType</key>
+										<string>ActionPressKeyCode</string>
+										<key>ID</key>
+										<string>Action.8C9B2658-02F9-4EFA-AE1A-F41B85D4F2A9</string>
+									</dict>
+								</array>
+								<key>isStickyKey</key>
+								<false/>
+							</dict>
+							<key>ActionRecordedOffset</key>
+							<real>0.0</real>
+							<key>ActionType</key>
+							<string>ActionPerformKeyMacro</string>
+							<key>ID</key>
+							<string>Action.B7B21166-8E84-480C-B910-17306861EDCB</string>
+						</dict>
+					</array>
+					<key>ButtonType</key>
+					<integer>0</integer>
+					<key>DisplayImageResourceIsTemplate</key>
+					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
+					<key>FontSize</key>
+					<real>22</real>
+					<key>ID</key>
+					<string>Button.9107A76A-8B46-4CF9-93D7-FABC75AFE0EB</string>
+					<key>PanelObjectType</key>
+					<string>Button</string>
+					<key>Rect</key>
+					<string>{{835, 135}, {55, 40}}</string>
 				</dict>
 				<dict>
 					<key>Actions</key>
@@ -3220,6 +3308,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3272,6 +3362,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3324,6 +3416,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3378,6 +3472,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3430,6 +3526,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3482,6 +3580,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3534,6 +3634,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3586,6 +3688,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3638,6 +3742,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3690,6 +3796,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3749,6 +3857,8 @@
 							<integer>0</integer>
 							<key>DisplayImageResourceIsTemplate</key>
 							<false/>
+							<key>DisplayImageWeight</key>
+							<string>FontWeightRegular</string>
 							<key>FontSize</key>
 							<real>22</real>
 							<key>ID</key>
@@ -3805,6 +3915,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3857,6 +3969,8 @@
 					<integer>0</integer>
 					<key>DisplayImageResourceIsTemplate</key>
 					<false/>
+					<key>DisplayImageWeight</key>
+					<string>FontWeightRegular</string>
 					<key>FontSize</key>
 					<real>22</real>
 					<key>ID</key>
@@ -3870,7 +3984,7 @@
 			<key>ProductSupportType</key>
 			<string>VirtualKeyboard</string>
 			<key>Rect</key>
-			<string>{{0, 0}, {890, 275}}</string>
+			<string>{{0, 495}, {890, 275}}</string>
 			<key>ScanStyle</key>
 			<integer>0</integer>
 			<key>ShowPanelLocationString</key>
